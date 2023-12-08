@@ -1,8 +1,8 @@
 # Projet-Integrateur
 
 ## Conception
-- [*] L'architecture doit respecter les concepts des réseaux commutés hiérarchiques (couches accès, distribution et coeur)
-- [*] Le réseau doit etre constitué de commutateurs, commutateurs multicouches et de routeurs
+- [ ] L'architecture doit respecter les concepts des réseaux commutés hiérarchiques (couches accès, distribution et coeur)
+- [ ] Le réseau doit etre constitué de commutateurs, commutateurs multicouches et de routeurs
 - [ ] Le réseau doit avoir des serveurs AAA et DHCP 
 
 ## Adressage
