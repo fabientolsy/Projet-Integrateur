@@ -1,0 +1,110 @@
+Building configuration...
+
+Current configuration : 1355 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username R1 password 0 cisco
+username R3 password 0 cisco
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.203.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 192.168.201.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Serial2/0
+ ip address 176.18.168.2 255.255.255.0
+ encapsulation ppp
+ ppp authentication chap
+ clock rate 2000000
+!
+interface Serial3/0
+ ip address 176.17.168.1 255.255.255.0
+ encapsulation ppp
+ ppp authentication chap
+ clock rate 2000000
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet6/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7/0
+ no ip address
+ shutdown
+!
+router ospf 2
+ router-id 3.3.3.3
+ log-adjacency-changes
+ network 176.17.168.0 0.0.0.255 area 1
+ network 176.18.168.0 0.0.0.255 area 1
+ network 192.168.200.0 0.0.0.255 area 2
+ network 192.168.203.0 0.0.0.255 area 2
+!
+ip classless
+ip route 192.180.0.0 255.255.192.0 176.17.168.2 
+ip route 192.180.0.0 255.255.192.0 176.18.168.1 5
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
