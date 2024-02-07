@@ -1,4 +1,4 @@
-# Projet-Integrateur
+# Projet integrateur
 
 ## Le projet
 Le but du projet est de créer un réseau pour une entreprise fictive qui possède deux batiments. Ces batiments sont comportés de 3 étages et 2 sous-réseaux par étage chacun. Le principe étant de rendre le tout fonctionnel et sécurisé, même si un ou des équipement(s) tombe(nt) en panne. J'ai réalisé cela en respectant 6 aspects de la réseautique:
